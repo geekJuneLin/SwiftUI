@@ -34,22 +34,11 @@ struct BlurView: UIViewRepresentable {
 }
 
 struct MenuView: View {
+    
+    @State var isMenuPresented = false
+    
     var body: some View {
-        ZStack{
-            BlurView(style: .light)
-                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-            HStack (alignment: .bottom){
-                VStack (alignment: .leading){
-                    Text("Hello world!")
-                        .foregroundColor(.black)
-                }
-                .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.9)
-                .background(Color.white)
-                Spacer()
-            }
-            .edgesIgnoringSafeArea(.all)
-        }
-        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        Text("hellow")
     }
 }
 

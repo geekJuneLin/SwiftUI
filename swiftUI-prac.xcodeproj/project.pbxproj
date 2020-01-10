@@ -322,6 +322,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"swiftUI-prac/Preview Content\"";
+				DEVELOPMENT_TEAM = A385T794G4;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "swiftUI-prac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -341,6 +342,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"swiftUI-prac/Preview Content\"";
+				DEVELOPMENT_TEAM = A385T794G4;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "swiftUI-prac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -64,7 +64,6 @@ struct ContentView: View {
                 })
                     .frame(width: 60, height: 60)
                     .background(RoundedCorners(color: .white, tl: 0, tr: 50, bl: 0, br: 50))
-//                    .animation(Animation.spring(response: 0, dampingFraction: 1, blendDuration: 0))
                 
                 Spacer()
                 
@@ -107,15 +106,28 @@ struct ContentView: View {
             
             NavButtons()
             
-            MenuView()
+            BlurView(style: .light)
                 .onTapGesture {
                     withAnimation{
                         self.isMenuPresented.toggle()
                     }
             }
-            .offset(x: self.isMenuPresented ? 0 : -UIScreen.main.bounds.height, y: 0)
+            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+            .opacity(self.isMenuPresented ? 1 : 0)
+            .animation(.easeInOut)
+
+            VStack{
+                Text("Menu bar")
+            }
+            .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.95)
+            .background(Color.white)
+            .clipped()
+            .cornerRadius(50)
+            .offset(x: self.isMenuPresented ? 0 : -UIScreen.main.bounds.width, y: UIScreen.main.bounds.height * 0.025)
             .rotation3DEffect(Angle(degrees: self.isMenuPresented ? 0 : 60), axis: (x: 0, y: self.isMenuPresented ? 40 : 0, z: 0))
-            .animation(Animation.easeInOut(duration: 1.5))
+            .animation(.easeIn)
+
+            
         }
         .background(Color.backgroundGray)
         .edgesIgnoringSafeArea(.all)
